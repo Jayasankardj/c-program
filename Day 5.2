@@ -1,0 +1,49 @@
+#include <stdio.h>
+
+int main() 
+{
+    float a,b,c,d,sum,aggregate;
+    printf("Enter the Marks in Python :");
+    scanf("%f",&a);
+    printf("Enter the Marks in C programming :");
+    scanf("%f",&b);
+    printf("Enter the Marks in Mathematics :");
+    scanf("%f",&c);
+    printf("Enter the Marks in Physics :");
+    scanf("%f",&d);
+    
+    sum=a+b+c+d;
+    printf("Total marks obtained %f\n",sum);
+    aggregate=sum/4;
+    printf("Aggregate of Marks %f\n",aggregate);
+    
+    if(a<0 || a>100 || b<0 || b>100 || c<0 || c>100 || d<0 || d>100)
+    {
+        printf("Entered Marks are Invalid");
+    }
+    else if(aggregate>=75 && aggregate<100)
+    {
+        printf("Distinction");
+    }
+    else if(aggregate>=60 && aggregate<75)
+    {
+        printf("First Division");
+    }
+    else if(aggregate>=50 && aggregate<60)
+    {
+        printf("Second Division");
+    }
+    else if(aggregate>=40 && aggregate<50)
+    {
+        printf("Third Division");
+    }
+    else if(aggregate>100 || aggregate<0)
+    {
+        printf("Invalid Marks");
+    }
+    else
+    {
+        printf("Fail");
+    }
+    return 0;
+}
